@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <link href="css/style.css" rel="stylesheet">
-        <title>Dijkstra algorithm - Visualisation</title>
     </head>
     <body>
         <header class="main-header">
