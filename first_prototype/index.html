@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&family=Italiana&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/testing-borders.css" rel="stylesheet">
+        <title>Dijkstra algorithm - Visualisation</title>
+    </head>
+    <body>
+        <header class="main-header">
+            <h1>DijkstraProfi</h1>
+            <nav class="header-nav">
+                <ul class="site-navigation">
+                    <li class="site-navigation-item">
+                        <a href="#">Algorithm</a>
+                    </li>
+                    <li class="site-navigation-item">
+                        <a href="#">Graph</a>
+                    </li>
+                    <li class="site-navigation-item">
+                        <a href="#">Speed</a>
+                    </li>
+                    <li class="site-navigation-item">
+                        <a href="#">Help</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="main-graph">
+                <img src="img/test-graph.png" alt="Main graph" class="graph-image">
+                <div class="start-from">
+                    <img src="img/start-vertex.svg" alt="start vertex symbol">
+                    <p>start from</p>
+                    <span class="pseudo-form">0</span>
+                </div>
+                <ul class="graph-control-buttons">
+                    <li>
+                        <a href="#">
+                            <img src="img/skip-back.svg" alt="skip back" class="button">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/step-back.svg" alt="step back" class="button">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/play.svg" alt="play" class="button">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/step-forward.svg" alt="step forward" class="button">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/skip-forward.svg" alt="skip forward" class="button">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="tables">
+                <table border="1" class="table-1">
+                    <tr>
+                        <th>v</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <th>distance(start, v)</th>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" class="table-2">
+                    <tr>
+                        <th>v</th>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <th>distance(start, v)</th>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                        <td>
+                            <img src="img/infinity.svg" alt="inf">
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section class="algorithm-step">
+                <h2>Current algorithm step</h2>
+                <p lang="ru">
+                    distance(start, v) - длинна кратчайшего из (известных нам на данный момент)
+                    путей от начальной вершины start до вершины v. По ходу работы алгоритма
+                    значения в distance  будут обновляться. Изначально distance(start, v) = 0,
+                    а для всех остальных вершин длинна пути равна бесконечности.
+                    Синим цветом обозначим номера вершин. Внутри каждой вершины v будем записывать
+                    текущее значение distance(start, v).
+                    Обработанными будем называть вершины, для которых distance больше не будет
+                    обновляться. То есть те, для которых мы уже нашли кратчайший возможный путь.
+                    В начале, конечно, все вершины необработанные.
+                </p>
+            </section>
+            <section>
+                <h2>Minimum distance search</h2>
+                <img src="img/test-heap.png" alt="Binary heap" class="graph-image">
+            </section>
+            <section class="calculations">
+                <h2>Calculations</h2>
+            </section>
+        </main>
+    </body>
+</html>
