@@ -1,6 +1,101 @@
 body {
     background-color: rgba(221, 231, 234, 1);
     font-family: "Inria Serif", sans-serif;
+    margin: 0;
+    margin-left: 3%;
+}
+
+.main-header {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.logo {
+    margin: 0;
+    font-size: 38px;
+}
+
+.site-navigation {
+    display: flex;
+    margin-left: 8px;
+    padding-left: 0;
+    width: 22%;
+    justify-content: space-between;
+}
+
+.site-navigation-item {
+    padding-left: 0;
+    font-size: 20px;
+}
+
+.site-navigation-item a {
+    padding-left: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 55fr 17fr 28fr;
+    grid-template-areas: "main-graph tables tables"
+                         "main-graph minimum-search minimum-search"
+                         "algorithm-step algorithm-step calculations";
+    gap: 3%;
+}
+
+.main-graph {
+    grid-area: main-graph;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "start-from control-buttons"
+                         "graph-image graph-image";
+}
+
+.tables {
+    grid-area: tables;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.minimum-search {
+    grid-area: minimum-search;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.algorithm-step {
+    grid-area: algorithm-step;
+}
+
+.calculations {
+    grid-area: calculations;
+}
+
+.start-from {
+    grid-area: start-from;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3vw;
+    margin-right: 10vw;
+}
+
+.graph-control-buttons {
+    grid-area: control-buttons;
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8vw;
+}
+
+.graph-image {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.main-graph .graph-image {
+    grid-area: graph-image;
 }
 
 h1 {
