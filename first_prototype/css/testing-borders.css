@@ -6,7 +6,7 @@ header, section {
     border: 2px solid red;
 }
 
-.header-nav, .graph-image,
+.header-nav, .graph-image, .heap-image,
 .graph-control-buttons, .start-from, h1, h2, p {
     border: 2px solid yellow;
 }
