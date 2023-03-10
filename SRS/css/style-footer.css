@@ -1,0 +1,16 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.go-backward, .go-forward {
+    color: purple;
+    text-decoration: none;
+    border: 1px solid magenta;
+    padding: 3px;
+}
+
+.go-backward:hover, .go-forward:hover {
+    color: blueviolet;
+}

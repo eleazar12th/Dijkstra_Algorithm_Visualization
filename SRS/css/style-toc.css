@@ -1,0 +1,48 @@
+h2 {
+    text-align: center;
+    background-color: darkorange;
+}
+
+.toc {
+    margin-left: 40px;
+}
+
+.toc > ol {
+    counter-reset: li;
+}
+
+.toc > ol > li {
+    counter-increment: li;
+}
+
+.toc > ol > li > ol {
+    counter-reset: lili;
+}
+
+.toc > ol > li > ol > li {
+    position: relative;
+    list-style: none;
+}
+
+.toc > ol > li > ol > li:before {
+    content: counter(li) "." counter(lili) ".";
+    counter-increment: lili;
+    position: absolute;
+    left: -2em;
+}
+
+.toc ol ol ol {
+    counter-reset: lilili;
+}
+
+.toc ol ol ol li {
+    position: relative;
+    list-style: none;
+}
+
+.toc ol ol ol li:before {
+    content: counter(li) "." counter(lili) "." counter(lilili) ".";
+    counter-increment: lilili;
+    position: absolute;
+    left: -3em;
+}
