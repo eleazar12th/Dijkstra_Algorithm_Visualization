@@ -18,19 +18,22 @@ body {
 .site-navigation {
     display: flex;
     margin-top: 1%;
-    margin-left: 0.5vw;
     padding-left: 0;
-    width: 20%;
-    justify-content: space-between;
 }
 
 .site-navigation-item {
     padding-left: 0;
+    margin-right: 0.3vw;
     font-size: 1.2vw;
+    position: relative;
+}
+
+.site-navigation-item:last-child {
+    margin-right: 0;
 }
 
 .site-navigation-item a {
-    padding-left: 0;
+    padding: 0.5vw;
 }
 
 main {
@@ -148,11 +151,19 @@ a {
     text-decoration: none;
 }
 
-.site-navigation-item a:hover {
+.can-hover:hover {
     color: mediumblue;
 }
 
-.site-navigation-item a:active {
+.with-options {
+    background-color: wheat;
+    color: rgb(115, 143, 152);
+    /* rgb(141, 167, 175);
+    rgb(115, 143, 152);
+    mediumblue; */
+}
+
+.empty a:active {
     color: black;
     font-weight: bold;
     border-bottom: 2px solid black;
@@ -186,9 +197,112 @@ td img {
     margin-bottom: 2.6vmin;
 }
 
-.button {
+.graph-button {
     border: 1px solid black;
     box-shadow: 0 4px 0 rgba(0, 0, 0, 0.08);
     width: 1.5vw;
     height: auto;
+}
+
+.help-popup {
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.help-popup-content {
+    margin: 40px auto 0 auto;
+    width: 50%;
+    height: 65vh;
+    padding: 40px 20px;
+    background-color: white;
+    box-shadow: 0 0 10px #000;
+    position: relative;
+}
+
+.help-popup-content p {
+    font-size: 16px;
+}
+
+.help-popup-close {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.help-popup-close img {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.help-popup-close:hover {
+    background-color: red;
+}
+
+.speed-popup {
+    margin-top: 10px;
+    left: -5vw;
+    width: 12vw;
+    height: 5vh;
+    padding: 5px 10px;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0 0 10px #000;
+    position: absolute;
+    color: white;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.speed-value {
+    font-size: 16px;
+}
+
+input[type=range] {
+    accent-color: blue;
+}
+
+.implementation-popup {
+    display: none;
+    margin-top: 0.5vw;
+    width: 150px;
+    height: 90px;
+    padding: 10px;
+    background-color: darkslateblue;
+    color: lightgray;
+    position: absolute;
+    font-size: 16px;
+}
+
+.implementation-popup ul {
+    padding-left: 0;
+}
+
+.implementation-option {
+    margin-bottom: 8px;
+}
+
+.implementation-option:last-child {
+    margin-bottom: 0;
+}
+
+.implementation-option label {
+    margin-right: 0;
+    padding-right: 20px;
+}
+
+.implementation-option label:hover {
+    color: whitesmoke;
+}
+
+input[type=radio] {
+    accent-color: darkorange;
 }

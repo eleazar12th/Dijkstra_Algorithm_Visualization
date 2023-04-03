@@ -16,17 +16,76 @@
             <h1 class="logo">DijkstraProfi</h1>
             <nav class="header-nav">
                 <ul class="site-navigation">
-                    <li class="site-navigation-item">
-                        <a href="#">Algorithm</a>
+                    <li class="site-navigation-item empty">
+                        <a href="#" class="can-hover">Graph</a>
                     </li>
                     <li class="site-navigation-item">
-                        <a href="#">Graph</a>
+                        <a href="#" class="open-implementation-button can-hover">Implementation</a>
+                        <div class="implementation-popup">
+                            <ul>
+                                <li class="implementation-option">
+                                    <label>
+                                        <input type="radio" name="implementation-choice" value="linear-search">
+                                        Linear search
+                                    </label>
+                                </li>
+                                <li class="implementation-option">
+                                    <label>
+                                        <input type="radio" name="implementation-choice" value="heap" checked>
+                                        Binary heap
+                                    </label>
+                                </li>
+                                <li class="implementation-option">
+                                    <label>
+                                        <input type="radio" name="implementation-choice" value="priority-queue">
+                                        Priority queue
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="site-navigation-item">
-                        <a href="#">Speed</a>
+                        <a href="#" class="speed-open-button dont-close-speed can-hover">Speed</a>
+                        <div class="speed-popup dont-close-speed">
+                            <input type="range" min="0.25" max="2" step="0.25" value="1"
+                                   class="dont-close-speed" style="width: 80%">
+                            <span class="speed-value dont-close-speed">1</span>
+                        </div>
                     </li>
                     <li class="site-navigation-item">
-                        <a href="#">Help</a>
+                        <a href="#" class="help-open-button can-hover">Help</a>
+                        <div class="help-popup">
+                            <div class="help-popup-content">
+                                <p>
+                                    Данное веб-приложение показывает работу
+                                    алгоритма Дейкстры на графе,
+                                    который пользователь выбирает из
+                                    предложенных. По мере работы алгоритма,
+                                    состояние графа меняется, и на экран
+                                    выводятся комментарии, объясняющие, что
+                                    происходит на текущем шаге.
+                                </p>
+                                <p>
+                                    Приложение DijkstraProfi должно стать
+                                    подспорьем для преподавателей и студентов
+                                    курса «Алгоритмы и структуры данных».
+                                    Было замечено, что при прохождении этого
+                                    курса студентам часто не хватает наглядности,
+                                    а преподавателям – ресурсов для обеспечения
+                                    этой наглядности. Веб-приложения,
+                                    визуализирующие разные алгоритмы, должны
+                                    помочь в решении этой проблемы. Таким образом,
+                                    DijkstraProfi – это экспериментальный проект,
+                                    если он получится успешным, другие
+                                    заинтересованные студенты или преподаватели
+                                    смогут создавать аналогичные приложения для
+                                    визуализации других алгоритмов.
+                                </p>
+                                <button class="help-popup-close">
+                                    <img src="img/close.svg" alt="Close" width="24">
+                                </button>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -42,27 +101,27 @@
                 <ul class="graph-control-buttons">
                     <li>
                         <a href="#">
-                            <img src="img/skip-back.svg" alt="skip back" class="button">
+                            <img src="img/skip-back.svg" alt="skip back" class="graph-button skip-back">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/step-back.svg" alt="step back" class="button">
+                            <img src="img/step-back.svg" alt="step back" class="graph-button step-back">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/play.svg" alt="play" class="button">
+                            <img src="img/play.svg" alt="play" class="graph-button play">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/step-forward.svg" alt="step forward" class="button">
+                            <img src="img/step-forward.svg" alt="step forward" class="graph-button step-forward">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="img/skip-forward.svg" alt="skip forward" class="button">
+                            <img src="img/skip-forward.svg" alt="skip forward" class="graph-button skip-forward">
                         </a>
                     </li>
                 </ul>
@@ -172,5 +231,6 @@
             </section>
         </main>
     </div>
+    <script src="script.js"></script>
     </body>
 </html>
