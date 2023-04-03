@@ -209,7 +209,13 @@
                 </table>
             </section>
             <section class="algorithm-step">
-                <h2>Current algorithm step</h2>
+                <div class="algorithm-step-header">
+                    <h2>Current algorithm step</h2>
+                    <select class="lang-select">
+                        <option value="ru" selected>Russian</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
                 <p lang="ru">
                     distance(start, v) - длинна кратчайшего из (известных нам на данный момент)
                     путей от начальной вершины start до вершины v. По ходу работы алгоритма
