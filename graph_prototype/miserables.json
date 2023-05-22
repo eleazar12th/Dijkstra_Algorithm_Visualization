@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "group": 1
+    },
+    {
+      "id": "1",
+      "group": 1
+    },
+    {
+      "id": "2",
+      "group": 2
+    },
+    {
+      "id": "3",
+      "group": 1
+    },
+    {
+      "id": "4",
+      "group": 1
+    },
+    {
+      "id": "5",
+      "group": 3
+    }
+  ],
+  "links": [
+    {
+      "source": "1",
+      "target": "0",
+      "label": "a"
+    },
+    {
+      "source": "2",
+      "target": "1",
+      "label": "b"
+    },
+    {
+      "source": "3",
+      "target": "4",
+      "label": "c"
+    },
+    {
+      "source": "5",
+      "target": "0",
+      "label": "d"
+    }
+  ]
+}
